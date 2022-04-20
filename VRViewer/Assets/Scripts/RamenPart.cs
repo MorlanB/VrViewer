@@ -28,7 +28,7 @@ public class RamenPart : MonoBehaviour
 
         partNameText.gameObject.SetActive(true);
 
-        partNameText.transform.position = transform.position;
+        //partNameText.transform.position = transform.position;
         partNameText.text = PartName;
     }
 
