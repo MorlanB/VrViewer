@@ -8,6 +8,20 @@ public class GameMaster : MonoBehaviour
     public GameObject expandedRamen;
 
     private bool ramenTracker;
+    private bool rightTracker;
+
+    public void CheckTracker()
+    {
+        if (rightTracker)
+        {
+            rightTracker = false;
+        }
+        else
+        {
+            rightTracker = true;
+        }
+        Debug.Log(rightTracker);
+    }
 
     public void ChangeModel()
     {
