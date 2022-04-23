@@ -7,7 +7,10 @@ public class GameMaster : MonoBehaviour
     public GameObject ramen;
     public GameObject expandedRamen;
 
+    public GameObject indNames;
+
     private bool ramenTracker;
+    private bool namesTracker;
     private bool rightTracker;
 
     public void CheckTracker()
@@ -21,6 +24,20 @@ public class GameMaster : MonoBehaviour
             rightTracker = true;
         }
         Debug.Log(rightTracker);
+    }
+
+    public void ToggleIndividualNames()
+    {
+        if (namesTracker)
+        {
+            indNames.SetActive(true);
+            namesTracker = false;
+        }
+        else
+        {
+            indNames.SetActive(false);
+            namesTracker = true;
+        }
     }
 
     public void ChangeModel()
