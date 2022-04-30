@@ -26,15 +26,15 @@ public class GameMaster : MonoBehaviour
 
     public void ToggleIndividualNames()
     {
-        if (namesTracker)
+        if (!namesTracker)
         {
             indNames.SetActive(true);
-            namesTracker = false;
+            namesTracker = true;
         }
         else
         {
             indNames.SetActive(false);
-            namesTracker = true;
+            namesTracker = false;
         }
     }
 
