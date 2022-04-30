@@ -11,19 +11,17 @@ public class GameMaster : MonoBehaviour
 
     private bool ramenTracker;
     private bool namesTracker;
-    private bool rightTracker;
+    public bool rightTracker { get; private set; }
+    public bool leftTracker { get; private set; }
 
-    public void CheckTracker()
+    public void ToggleRightTrigger()
     {
-        if (rightTracker)
-        {
-            rightTracker = false;
-        }
-        else
-        {
-            rightTracker = true;
-        }
-        Debug.Log(rightTracker);
+        rightTracker = !rightTracker;
+    }
+
+    public void ToggleLeftTrigger()
+    {
+        leftTracker = !leftTracker;
     }
 
     public void ToggleIndividualNames()
