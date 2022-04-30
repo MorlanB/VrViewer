@@ -8,19 +8,19 @@ public class GameMaster : MonoBehaviour
     public GameObject expandedRamen;
 
     private bool ramenTracker;
-    private bool rightTracker;
 
-    public void CheckTracker()
+    public bool rightTracker { get; private set; }
+    public bool leftTracker { get; private set; }
+
+
+    public void ToggleRightTrigger()
     {
-        if (rightTracker)
-        {
-            rightTracker = false;
-        }
-        else
-        {
-            rightTracker = true;
-        }
-        Debug.Log(rightTracker);
+        rightTracker = !rightTracker;
+    }
+
+    public void ToggleLeftTrigger()
+    {
+        leftTracker = !leftTracker;
     }
 
     public void ChangeModel()
@@ -42,12 +42,13 @@ public class GameMaster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        rightTracker = false;
+        leftTracker = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //Debug.Log("rightTracker: " + rightTracker + " leftTracker: " + leftTracker);
     }
 }
