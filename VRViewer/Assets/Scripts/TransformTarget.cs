@@ -4,8 +4,6 @@ public class TransformTarget : MonoBehaviour
 {
     private bool inTransformMode = false;
     private bool inTranslateMode = false;
-    private bool hasEnteredTransformMode = false;
-    private bool hasEnteredTranslateMode = false;
 
     public Transform leftController;
     public Transform rightController;
