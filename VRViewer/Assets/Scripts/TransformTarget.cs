@@ -32,7 +32,7 @@ public class TransformTarget : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gm = GameObject.Find("GameMaster").GetComponent<GameMaster>();    
+        gm = GameObject.Find("GameMaster").GetComponent<GameMaster>();
     }
 
     // Update is called once per frame
@@ -111,11 +111,11 @@ public class TransformTarget : MonoBehaviour
 
 
     //TranslateMode
-     public void MoveTarget(bool rightTrigger)
+    public void MoveTarget(bool rightTrigger)
     {
         if (rightTrigger)
             target.position = rightController.transform.position + initialPosOffset;
-        else 
+        else
             target.position = leftController.transform.position + initialPosOffset;
     }
 
